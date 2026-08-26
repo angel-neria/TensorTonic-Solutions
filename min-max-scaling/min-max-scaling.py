@@ -27,14 +27,13 @@ def min_max_scaling(data: list) -> list:
         lista_max.append(max)
         lista_min.append(min)
 
-    #Estandarización:
-    data_maxmin = data
+    #Estandarización
     for i in range(m):
         for j in range(n):
             if(lista_max[j] !=lista_min[j]):
-                data_maxmin[i][j] = (data_maxmin[i][j] - lista_min[j])/(lista_max[j]-lista_min[j])
+                data[i][j] = (data[i][j] - lista_min[j])/(lista_max[j]-lista_min[j])
             else:
-                data_maxmin[i][j] = 0
-    return data_maxmin
+                data[i][j] = 0
+    return data
         
     pass
