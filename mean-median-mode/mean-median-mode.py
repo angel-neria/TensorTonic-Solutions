@@ -6,15 +6,16 @@ def mean_median_mode(x: list) -> dict:
     Returns a dictionary with mean, median, and mode.
     """
     X = sorted(x) #importante para la mediana
+    n = len(x)
 
     #Cálculo de la media
     media = sum(X)/len(X)
 
     #Cálculo de la mediana
     if(len(X)%2 == 0):
-        mediana = (X[(len(X) // 2) - 1] + X[len(X)//2])/2
+        mediana = (X[(n // 2) - 1] + X[n//2])/2
     else:
-        mediana = X[len(X)//2]
+        mediana = X[n//2]
 
     #Cálculo de la moda
     frecuencias = Counter(X)
