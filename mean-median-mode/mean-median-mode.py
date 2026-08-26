@@ -23,7 +23,7 @@ def mean_median_mode(x: list) -> dict:
     for keys in frecuencias.keys():
         if(frecuencias[keys] > temp):
             temp = frecuencias[keys]
-            moda = keys
+            moda = keys #También se puede hacer moda = Counter(x).most_common(1)[0][0]
 
     #Diccionario
     results = {
